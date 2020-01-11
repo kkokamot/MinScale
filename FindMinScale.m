@@ -32,6 +32,3 @@ for i = 5:shortL
         end
     end
 end
-
-% figure(9)
-% loglog(L1,H1,L2,H2, '--', div_x, div_y, 'o')
