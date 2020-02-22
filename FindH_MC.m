@@ -25,15 +25,14 @@ for l = 1:2
         Z = rot90(Z); %when running multiple times Z is rotated, switching H1 and H2, possibly switching how the graph is formatted
     end
     flipZ = fliplr(Z); %re-orientates Z
-    %par
+
     % This for loop randomly selects sectperrow amount of starting points 
     % from each row to calculate RMS height from
     parfor iwin=5:sz(l) %iwin is window size and ranges from 5 to the size of a row. 
-    %    tic
-    %Nr is how many rows RMS will be computed for
-    %limN is the length of the row analyzed
-    sectperrow = 20; %this is how many windows will be analyzed
-    S = nan(sectperrow,1); %pre-allocating S, the RMS values for each window analyzed for a specified window length
+        %Nr is how many rows RMS will be computed for
+        %limN is the length of the row analyzed
+        sectperrow = 20; %this is how many windows will be analyzed
+        S = nan(sectperrow,1); %pre-allocating S, the RMS values for each window analyzed for a specified window length
         if l == 2
             Nr = nrow; 
             S=nan(sectperrow,1);
